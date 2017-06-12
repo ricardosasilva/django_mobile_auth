@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django_mobile_auth',
-    version='0.2.1',
+    version='0.2.3',
     packages=find_packages(),
     license='MIT',
     author='Ricardo S. A. Silva',
