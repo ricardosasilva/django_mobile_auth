@@ -23,3 +23,8 @@ A Django app that allows users to authenticate using email, phone number or user
 
     AUTH_USER_MODEL = 'mobile_auth.MobileUser'
     AUTHENTICATION_BACKENDS = ['mobile_auth.backends.MobileAuthBackend',]
+
+
+## Releases ##
+
+- 0.2.7: Replace fields first_name and last_name with just name. The migration were reset back to 001. Please note before update.

@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django_mobile_auth',
-    version='0.2.3',
+    version='0.2.7',
     packages=find_packages(),
     license='MIT',
     author='Ricardo S. A. Silva',
@@ -14,7 +14,7 @@ setup(
     keywords='django auth email phone',
     author_email='ricardo@salamandra.cc',
     long_description=open('README.md').read(),
-    install_requires=['django',],
+    install_requires=['django', 'django-phonenumber-field==1.3.0', 'phonenumberslite==8.3.2'],
     include_package_data=True,
     url='https://github.com/ricardosasilva/django_mobile_auth',
     classifiers=[

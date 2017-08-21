@@ -62,8 +62,7 @@ class AbstractMobileUser(AbstractBaseUser, PermissionsMixin):
             'unique': _("A user with that username already exists."),
         },
     )
-    first_name = models.CharField(_('first name'), max_length=30, blank=True)
-    last_name = models.CharField(_('last name'), max_length=150, blank=True)
+    name = models.CharField(_('name'), max_length=100, blank=True)
     email = EmailNullField(_('email address'), max_length=255, blank=True, null=True, unique=True)
     phone_number = PhoneNumberNullField(_('phone number'), blank=True, null=True, unique=True)
     is_staff = models.BooleanField(
@@ -92,13 +91,12 @@ class AbstractMobileUser(AbstractBaseUser, PermissionsMixin):
         abstract = True
 
     def get_full_name(self):
-        """Return the first_name plus the last_name, with a space in between."""
-        full_name = '%s %s' % (self.first_name, self.last_name)
-        return full_name.strip()
+        """Return the name"""
+        return self.name
 
     def get_short_name(self):
-        """Return the short name for the user."""
-        return self.first_name
+        """Return the first string of the name for the user."""
+        return self.name.split(' ')[0]
 
     def email_user(self, subject, message, from_email=None, **kwargs):
         """Sends an email to this User."""
