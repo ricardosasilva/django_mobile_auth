@@ -27,4 +27,4 @@ A Django app that allows users to authenticate using email, phone number or user
 
 ## Releases ##
 
-- 0.2.7: Replace fields first_name and last_name with just name. The migration were reset back to 001. Please note before update.
+- 0.2.7: Replace fields first_name and last_name with just name. The migration were reset back to 001. Please check it before updating.
