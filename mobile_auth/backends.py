@@ -4,7 +4,7 @@ from django.contrib.auth import get_user_model
 class MobileAuthBackend(object):
     """Allows user to sign-in using email, username or phone_number."""
 
-    def authenticate(self, username=None, password=None, **kwargs):
+    def authenticate(self, request, username=None, password=None):
         UserModel = get_user_model()
 
         try:
