@@ -16,7 +16,7 @@ setup(
     long_description=open('README.md').read(),
     install_requires=[
         'django',
-        'django-phonenumber-field==2.0.0',
+        'django-phonenumber-field==3.0.1',
         'phonenumberslite==8.3.2'
     ],
     include_package_data=True,
